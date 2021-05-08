@@ -19,8 +19,8 @@
     <h2>Doctor Name: <%=doctor.name%>, Years Experience: <%=doctor.years_practiced%></h2>
   <%end%>
 </section>
-
-<h2>Add A Doctor To This Surgery</h2>
+<br/>
+<h1>Add A Doctor To This Surgery</h1>
 <h3>Instructions: Fill in the doctor name and click submit.</h3>
   <%=form_with url: "/surgeries/#{@surgery.id}/doctors", method: :post do |form|%>
   <%=form.label :name%>
