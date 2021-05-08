@@ -25,13 +25,13 @@ RSpec.describe Doctor, type: :feature do
       within("#most_experienced") do
         expect(page).to have_content(@meredith_grey.name)
         expect(page).to have_content(@meredith_grey.years_practiced)
-        expect(page).to have_content(@meredith_grey.university)
       end
       within("#least_experienced") do
         expect(page).to have_content(@alex_karev.name)
         expect(page).to have_content(@alex_karev.years_practiced)
-        expect(page).to have_content(@alex_karev.university)
       end
+      save_and_open_page
     end
   end
 end
+
