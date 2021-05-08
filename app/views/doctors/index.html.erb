@@ -1,3 +1,4 @@
 <h1>Grey Sloan Doctor Information Page</h1>
   <%@doctors.order_by_tenure.each do |doctor|%>
+  <h2>Doctor Name: <%=doctor.name%>, Years Practiced: <%=doctor.years_practiced%>, University: <%=doctor.university%></h2>
   <%end%>

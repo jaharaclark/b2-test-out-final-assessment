@@ -23,9 +23,9 @@ RSpec.describe Doctor, type: :feature do
       expect(page).to have_content(@miranda_bailey.name)
       expect(page).to have_content(@miranda_bailey.years_practiced)
       expect(page).to have_content(@miranda_bailey.university)
-      expect(@miranda_bailey).to appear_before(@meredith_grey)
-      expect(@miranda_bailey).to appear_before(@alex_karev)
-      expect(@meredith_grey).to appear_before(@alex_karev)
+      expect(@miranda_bailey.name).to appear_before(@meredith_grey.name)
+      expect(@miranda_bailey.name).to appear_before(@alex_karev.name)
+      expect(@meredith_grey.name).to appear_before(@alex_karev.name)
     end
   end
 
