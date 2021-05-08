@@ -1,0 +1,17 @@
+<h1><%=@surgery.name%>'s Information Page</h1>
+<h2>Day Of The Week: <%=@surgery.day_of_week%></h2>
+<h2>Operating Room Number: <%=@surgery.operating_room_number%></h2>
+<br/>
+<h1>Doctors Preforming <%=@surgery.name%>: </h1>
+<%@surgery.doctors.each do |doctor|%>
+  <h2>Doctor Name: <%=doctor.name%>, Years Experience: <%=doctor.years_practiced%></h2>
+<%end%>
+<br/>
+<h2>Most Experienced: </h2>
+  <%@surgery.doctors.most_experienced.each do |doctor|%>
+    <h2>Doctor Name: <%=doctor.name%>, Years Experience: <%=doctor.years_practiced%></h2>
+  <%end%>
+<h2>Least Experienced: </h2>
+  <%@surgery.doctors.least_experienced.each do |doctor|%>
+    <h2>Doctor Name: <%=doctor.name%>, Years Experience: <%=doctor.years_practiced%></h2>
+  <%end%>
