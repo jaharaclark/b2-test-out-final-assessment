@@ -6,7 +6,7 @@ RSpec.describe Doctor, type: :feature do
     @alex_karev = Doctor.create!(name: "Alex Karev", years_practiced: 14, university: "University of Boston")
     @miranda_bailey = Doctor.create!(name: "Miranda Bailey", years_practiced: 28, university: "Harvard")
     @c_section = @alex_karev.surgeries.create(title: "Caesarean Section", day_of_week: "Monday", operating_room_number: 1)
-    @bowl_reconstruction = @meredith_grey.surgeries.create!(title: "Bowl Reconstruction", day_of_week: "Tuesday", operating_room_number: 2)
+    @bowel_reconstruction = @meredith_grey.surgeries.create!(title: "Bowel Reconstruction", day_of_week: "Tuesday", operating_room_number: 2)
   end
 
   describe "User Story One" do

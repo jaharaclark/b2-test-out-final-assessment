@@ -30,7 +30,22 @@ RSpec.describe Doctor, type: :feature do
         expect(page).to have_content(@alex_karev.name)
         expect(page).to have_content(@alex_karev.years_practiced)
       end
-      save_and_open_page
+    end
+  end
+
+  describe "User Story Three" do
+    it "When I visit a surgery's show page
+    I see a field with instructions to Add A Doctor To This Surgery
+    When I input the name of an existing Doctor into that field
+    And I click submit
+    I'm taken back to that surgery's show page
+    And I see the name of that doctor listed on the page" do
+      visit "/surgeries/#{@c_section.id}"
+      expect(page).to have_content("Add A Doctor To This Surgery")
+      fill_in :name, with: "Miranda Bailey"
+      click_on("Submit")
+      expect(current_path).to eq("/surgeries/#{@c_section.id}")
+      expect(page).to have_content(@miranda_bailey.name)
     end
   end
 end
